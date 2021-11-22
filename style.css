@@ -1,14 +1,27 @@
-.container {
-    background-color: red;
-    height: 500px;
-    grid: grid;
+#container {
+    height: 700px;
+    width: 900px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 50px auto;
+  
 
 }
 
 .gridDiv {
     height: 30px;
     width: 30px;
-    border: groove black;
+    border: solid #333;
     background-color:pink;
+
+}
+.button {
+    width:60px;
+    height: 25px;
+    background-color: white;
+    border: 
 
 }
