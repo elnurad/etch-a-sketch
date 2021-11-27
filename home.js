@@ -74,8 +74,8 @@ const removeOldGrid =()=>{
 
 //I need to wrap these in a js object 
 container.style.display = "grid";
-container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},1fr)`;
-container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, 1fr)`;
+container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},minmax(0, 1fr))`;
+container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, minmax(0, 1fr))`;
 container.style.justifyContent = 'center';
 container.style.alignItems = 'center';
 
@@ -84,8 +84,8 @@ button.onclick = ()=>{
     removeOldGrid()
     createGrid(parseInt(slider.value), parseInt(slider.value))
     container.style.display = "grid";
-    container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},1fr)`;
-    container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},minmax(0, 1fr))`;
+    container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, minmax(0, 1fr))`;
     container.style.justifyContent = 'center';
     container.style.alignItems = 'center';
 
