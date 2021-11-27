@@ -22,18 +22,20 @@ slider.max = '25';
 slider.value = '16'
 buttonWrap.appendChild(slider)
 
+// change number of grid items upon input from user
 slider.oninput = ()=> {
     sliderValue.innerHTML = `Size: ${slider.value}X${slider.value}`
   
 }
 
-
+//text to display number of grid elements
 let sliderValue = document.createElement("p")
 sliderValue.innerHTML = `Size: ${slider.value}X${slider.value}`
 sliderValue.style.fontFamily = "Didot, serif";
 
 buttonWrap.appendChild(sliderValue)
-console.log(container.clientWidth)
+
+//function to create grid
 const createGrid = (col, row) =>{
   
     for (i = 0; i<col*row; i++){
@@ -70,7 +72,7 @@ const removeOldGrid =()=>{
     }
 }
 
-
+//I need to wrap these in a js object 
 container.style.display = "grid";
 container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},1fr)`;
 container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, 1fr)`;
