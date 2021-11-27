@@ -1,37 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
 .layout {
-    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    /* grid-template-rows: 1fr 1fr; */
-    justify-content: center;
-    /* align-items: center; */
+    grid-template-columns: 1fr 3fr; 
+    margin-top: 5%;
+    margin-left: 2%;
+   
 }
 
 #container {
-    height: 600px;
-    width: 600px;
-   border: solid lightblue;
-    /* display: grid;
-    grid-template-columns: repeat(16, 1fr); */
-    /* justify-items: center;
-    align-items: center; */
-    margin: 50px 50px;
+
+   width: 400px;
+   height: 400px;
+ 
+   
   
 
 }
 
 .gridDiv {
-    /* height: 24px; size should be 1/slider.value */
-    height: 24px; 
-    width: 24px;
+  
     border: solid #333;
-    background-color:pink;
+    background-color:teal;
+    
 
 }
-.button {
-    width:60px;
-    height: 25px;
+.button, .clearButton {
+    width: 5rem;
+    border: groove;
+    border-radius: 12%;
     background-color: white;
-    border: 
+    font-family: 'Barlow Condensed', sans-serif;
+    outline: none;
+    background-color: whitesmoke;
+
 
 }

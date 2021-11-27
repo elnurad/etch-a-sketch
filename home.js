@@ -18,34 +18,35 @@ slider.setAttribute("type", "min", "max", "value", "class")
 slider.type = "range"
 slider.class = "slider"
 slider.min = '2';
-slider.max = '30';
+slider.max = '25';
 slider.value = '16'
 buttonWrap.appendChild(slider)
-console.log(slider.value)
 
-//on input from user the slider changes the number on display
 slider.oninput = ()=> {
-    sliderValue.innerHTML = `Value ${slider.value}X${slider.value}`
-    console.log(slider.value)
+    sliderValue.innerHTML = `Size: ${slider.value}X${slider.value}`
+  
 }
 
-//display the number of boxes
+
 let sliderValue = document.createElement("p")
-sliderValue.innerHTML = `Value ${slider.value}X${slider.value}`
-console.log(sliderValue.innerHTML)
+sliderValue.innerHTML = `Size: ${slider.value}X${slider.value}`
+sliderValue.style.fontFamily = "Didot, serif";
+
 buttonWrap.appendChild(sliderValue)
-
-// let containerGridStyle = document.createElement('style');
-
-//function to create a grid
+console.log(container.clientWidth)
 const createGrid = (col, row) =>{
-
+  
     for (i = 0; i<col*row; i++){
          let element = document.createElement("div");
+         let elementWidth = container.clientWidth/row;
+         let elementHeight = container.clientHeight/col;
          element.className = "gridDiv";
+         element.style.width = `${elementWidth}px`
+         element.style.height = `${elementHeight}px`
+     
          element.onmouseover = function(){
-            this.style.backgroundColor = 'red'
-            console.log(i)
+            this.style.backgroundColor = 'green'
+            
         }
         
         clearButton.addEventListener('click', ()=>{
@@ -55,11 +56,11 @@ const createGrid = (col, row) =>{
         })
        
         container.appendChild(element)
-        
+      
        
     }
    
-console.log('created New Grid')
+// console.log('created New Grid')
 }
 
 // remove old grid so that a new grid can be created when the button is clicked
@@ -69,13 +70,6 @@ const removeOldGrid =()=>{
     }
 }
 
-
-
-// container.style.display = "grid";
-// container.style.gridTemplateColumns = `repeat(auto-fill, 1fr)`;
-// container.style.gridTemplateRows =`repeat(auto-fill, 1fr)`;
-// container.style.justifyContent = 'center';
-// container.style.alignItems = 'center';
 
 container.style.display = "grid";
 container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},1fr)`;
