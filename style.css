@@ -1,31 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow+Condensed:wght@300;600&family=PT+Sans+Narrow&display=swap');
+
+body{
+    background-color: rgb(141, 197, 216);
+}
+
+header {
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: rgb(36, 30, 30);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
 .layout {
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); 
-    margin-top: 5%;
-    margin-left: 2%;
+    
+    margin-left: 2em;
    
 }
 
 #container {
-
-   width: 500px;
-   height: 500px; 
+width: 500px;
+height: 500px;
 
 }
 
 .gridDiv {
   
     border: solid #333;
-    background-color:teal;
+    background-color:rgb(36, 110, 110);
     
 
 }
 .button, .clearButton {
     width: 5rem;
-    border: groove;
-    border-radius: 12%;
+    border-style: groove;
+    border-radius: 10%;
     background-color: white;
     font-family: 'Barlow Condensed', sans-serif;
     outline: none;
