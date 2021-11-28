@@ -62,7 +62,6 @@ const createGrid = (col, row) =>{
        
     }
    
-// console.log('created New Grid')
 }
 
 // remove old grid so that a new grid can be created when the button is clicked
@@ -72,12 +71,14 @@ const removeOldGrid =()=>{
     }
 }
 
-//I need to wrap these in a js object 
-container.style.display = "grid";
+
+
+container.style.display = "grid",
 container.style.gridTemplateColumns = `repeat(${parseInt(slider.value)},minmax(0, 1fr))`;
 container.style.gridTemplateRows = `repeat(${parseInt(slider.value)}, minmax(0, 1fr))`;
 container.style.justifyContent = 'center';
 container.style.alignItems = 'center';
+
 
 //create new grid on click 
 button.onclick = ()=>{

@@ -12,7 +12,7 @@ header {
     color: rgb(36, 30, 30);
     font-size: 2rem;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 1em;
 
 }
@@ -40,7 +40,7 @@ height: 500px;
 }
 .button, .clearButton {
     width: 5rem;
-    border-style: groove;
+    border-style: solid;
     border-radius: 10%;
     background-color: white;
     font-family: 'Barlow Condensed', sans-serif;
